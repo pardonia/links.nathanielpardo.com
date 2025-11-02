@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script src="//a.v0idk.dev/special/js/np.js" defer></script>
+    <title>Links & Profiles</title>
+    <style>
+        :root{
+            --bg:#000;
+            --text:#eaeaea;
+            --muted:#9aa6b2;
+            --accent:#4dd0e1;
+            --card:#0b0b0b;
+            --border:#222;
+        }
+        html,body{height:100%}
+        body{
+            margin:0;
+            font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+            background:var(--bg);
+            color:var(--text);
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+        }
+        .wrap{
+            max-width:1100px;
+            margin:32px auto;
+            padding:24px;
+        }
+        header{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:16px;
+            margin-bottom:20px;
+        }
+        h1{
+            margin:0;
+            font-size:1.5rem;
+            letter-spacing:0.2px;
+        }
+        p.lead{
+            margin:8px 0 0 0;
+            color:var(--muted);
+            font-size:0.95rem;
+        }
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:12px;
+            margin-top:18px;
+        }
+        .card{
+            background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+            border:1px solid var(--border);
+            padding:12px;
+            border-radius:8px;
+        }
+        .site-link{
+            display:inline-block;
+            color:var(--accent);
+            font-weight:600;
+            text-decoration:none;
+            margin-bottom:6px;
+            word-break:break-all;
+        }
+        .site-link:focus{outline:2px solid rgba(77,208,225,0.18); outline-offset:3px}
+        .meta{
+            display:flex;
+            gap:8px;
+            align-items:center;
+            color:var(--muted);
+            font-size:0.9rem;
+            margin-bottom:8px;
+        }
+        .handle,
+        .title,
+        .bio{
+            border-radius:4px;
+            padding:2px 4px;
+            outline:none;
+        }
+        .handle:focus,
+        .title:focus,
+        .bio:focus{
+            background:rgba(255,255,255,0.02);
+            box-shadow:0 0 0 2px rgba(77,208,225,0.05) inset;
+        }
+        .handle{color:var(--accent); font-weight:600}
+        .bio{color:var(--muted); font-size:0.9rem; margin:6px 0 0 0}
+        .url-row{display:flex; gap:8px; margin-top:8px; align-items:center}
+        .url-input{
+            flex:1;
+            background:#0a0a0a;
+            color:var(--text);
+            border:1px solid #1b1b1b;
+            padding:6px 8px;
+            border-radius:6px;
+            font-size:0.9rem;
+        }
+        .set-url{
+            background:transparent;
+            color:var(--accent);
+            border:1px solid rgba(77,208,225,0.16);
+            padding:6px 10px;
+            border-radius:6px;
+            cursor:pointer;
+            font-weight:600;
+        }
+        .set-url:hover{background:rgba(77,208,225,0.02)}
+        small.hint{color:var(--muted); font-size:0.8rem}
+        footer{margin-top:18px;color:var(--muted);font-size:0.85rem}
+        @media (max-width:520px){
+            header{flex-direction:column;align-items:flex-start}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div>
+                <h1 contenteditable="true" class="title">Nathaniel Pardo Links & Profiles</h1>
+                <p class="lead">Full index of external websites and profiles.</p>
+            </div>
+            <div style="text-align:right">
+                <small class="hint">Powered by NP Vault</small>
+            </div>
+        </header>
+
+        <main>
+            <div class="grid" aria-live="polite">
+                <!-- Block 1 -->
+                <div class="card">
+                    <a href="https://example1.com" class="site-link" target="_blank" rel="noopener noreferrer">Website 1</a>
+                    <div class="meta">
+                        <span class="handle">@handle1</span>
+                    </div>
+                    <p class="bio">Short description or profile for website 1...</p>
+                </div>
+
+                <!-- Block 2 -->
+                <div class="card">
+                    <a href="https://example2.com" class="site-link" target="_blank" rel="noopener noreferrer">Website 2</a>
+                    <div class="meta">
+                        <span class="handle">@handle2</span>
+                    </div>
+                    <p class="bio">Short description or profile for website 2...</p>
+                </div>
+
+                <!-- Block 3 -->
+                <div class="card">
+                    <a href="https://example3.com" class="site-link" target="_blank" rel="noopener noreferrer">Website 3</a>
+                    <div class="meta">
+                        <span class="handle">@handle3</span>
+                    </div>
+                    <p class="bio">Short description or profile for website 3...</p>
+                </div>
+
+                <!-- Block 4 -->
+                <div class="card">
+                    <a href="https://example4.com" class="site-link" target="_blank" rel="noopener noreferrer">Website 4</a>
+                    <div class="meta">
+                        <span class="handle">@handle4</span>
+                    </div>
+                    <p class="bio">Short description or profile for website 4...</p>
+                </div>
+
+                <!-- Block 5 -->
+                <div class="card">
+                    <a href="https://example5.com" class="site-link" target="_blank" rel="noopener noreferrer">Website 5</a>
+                    <div class="meta">
+                        <span class="handle">@handle5</span>
+                    </div>
+                    <p class="bio">Short description or profile for website 5...</p>
+                </div>
+
+                <!-- Continue with more blocks as needed... -->
+
+                                <!-- Block 1 -->
+                <div class="card">
+                    <a href="https://example1.com" class="site-link" target="_blank" rel="noopener noreferrer">Website 1</a>
+                    <div class="meta">
+                        <span class="handle">@handle1</span>
+                    </div>
+                    <p class="bio">Short description or profile for website 1...</p>
+                </div>
+
+                <!-- Block 2 -->
+                <div class="card">
+                    <a href="https://example2.com" class="site-link" target="_blank" rel="noopener noreferrer">Website 2</a>
+                    <div class="meta">
+                        <span class="handle">@handle2</span>
+                    </div>
+                    <p class="bio">Short description or profile for website 2...</p>
+                </div>
+
+                <!-- Block 3 -->
+                <div class="card">
+                    <a href="https://example3.com" class="site-link" target="_blank" rel="noopener noreferrer">Website 3</a>
+                    <div class="meta">
+                        <span class="handle">@handle3</span>
+                    </div>
+                    <p class="bio">Short description or profile for website 3...</p>
+                </div>
+
+                <!-- Block 4 -->
+                <div class="card">
+                    <a href="https://example4.com" class="site-link" target="_blank" rel="noopener noreferrer">Website 4</a>
+                    <div class="meta">
+                        <span class="handle">@handle4</span>
+                    </div>
+                    <p class="bio">Short description or profile for website 4...</p>
+                </div>
+
+                <!-- Block 5 -->
+                <div class="card">
+                    <a href="https://example5.com" class="site-link" target="_blank" rel="noopener noreferrer">Website 5</a>
+                    <div class="meta">
+                        <span class="handle">@handle5</span>
+                    </div>
+                    <p class="bio">Short description or profile for website 5...</p>
+                </div>            
+            <!-- Block 1 -->
+                <div class="card">
+                    <a href="https://example1.com" class="site-link" target="_blank" rel="noopener noreferrer">Website 1</a>
+                    <div class="meta">
+                        <span class="handle" contenteditable="true">@handle1</span>
+                    </div>
+                    <p class="bio" contenteditable="true">Short description or profile for website 1...</p>
+                </div>
+
+                <!-- Block 2 -->
+                <div class="card">
+                    <a href="https://example2.com" class="site-link" target="_blank" rel="noopener noreferrer">Website 2</a>
+                    <div class="meta">
+                        <span class="handle" contenteditable="true">@handle2</span>
+                    </div>
+                    <p class="bio" contenteditable="true">Short description or profile for website 2...</p>
+                </div>
+
+                <!-- Block 3 -->
+                <div class="card">
+                    <a href="https://example3.com" class="site-link" target="_blank" rel="noopener noreferrer">Website 3</a>
+                    <div class="meta">
+                        <span class="handle" contenteditable="true">@handle3</span>
+                    </div>
+                    <p class="bio" contenteditable="true">Short description or profile for website 3...</p>
+                </div>
+
+                <!-- Block 4 -->
+                <div class="card">
+                    <a href="https://example4.com" class="site-link" target="_blank" rel="noopener noreferrer">Website 4</a>
+                    <div class="meta">
+                        <span class="handle" contenteditable="true">@handle4</span>
+                    </div>
+                    <p class="bio" contenteditable="true">Short description or profile for website 4...</p>
+                </div>
+
+                <!-- Block 5 -->
+                <div class="card">
+                    <a href="https://example5.com" class="site-link" target="_blank" rel="noopener noreferrer">Website 5</a>
+                    <div class="meta">
+                        <span class="handle" contenteditable="true">@handle5</span>
+                    </div>
+                    <p class="bio" contenteditable="true">Short description or profile for website 5...</p>
+                </div>
+            <footer>
+                More Coming Soon
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
